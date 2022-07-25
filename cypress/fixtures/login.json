@@ -1,0 +1,11 @@
+{
+    "user1" :{
+    "email": "adamk2000@interia.eu",
+    "password" : "password"
+    },
+
+    "user2" :{
+    "email": "a@interia.eu",
+    "password" : "password"
+    } 
+}
