@@ -1,6 +1,5 @@
 export class MainPage {
 
-   
 
     static openAutomationPracticePage(){
 
@@ -41,5 +40,19 @@ export class MainPage {
     static clickSubmitLogin(){
         cy.get("#SubmitLogin").contains("Sign in").click();
     }
+
+    static clickAddCard(){
+        
+        cy.get(".ajax_add_to_cart_button").contains("Add to cart").click();
+
+    }
+
+    static clickContinueShopping(){
+        while(!cy.get(".clearfix").should('be.visible')){
+        
+        }
+        cy.get(".exclusive-medium").contains("Continue shopping").click();
+    }
+
 
 }
