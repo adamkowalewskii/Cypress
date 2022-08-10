@@ -35,7 +35,7 @@ context('e-shop go to', () => {
             LoginPage.clickSubmitLogin();
             LoggedPage.checkCorrectLogin(data[user].nickname)
             LoggedPage.clickSingOut();
-            cy.wait(7000);
+            
           })
           
             

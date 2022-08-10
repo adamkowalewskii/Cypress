@@ -6,5 +6,6 @@ export class LoggedPage{
 
     static clickSingOut(){
         cy.get('.logout').click();
+        cy.wait(7000);
     }
 }

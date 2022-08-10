@@ -31,7 +31,7 @@ export class MainPage {
     static clickAddCard(product){
         
         cy.get(product).click();
-        cy.wait(10000);
+        cy.wait(14000);
 
     }
 
