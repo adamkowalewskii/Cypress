@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 
 import {MainPage} from "../page_objects/main-page"
+import {LoginPage} from "../page_objects/login-page"
+import {LoggedPage} from "../page_objects/logged-page"
 
 
 context('e-shop go to', () => {
@@ -20,20 +22,35 @@ context('e-shop go to', () => {
   })
 
   describe('test',() => {
-    var i = 0;
-    Cypress._.times(2, () => {
+    
+    
         
         it('should open Sign in', () => {
+          var users = Object.keys(data);
+          users.forEach((user) => {
             
             MainPage.clickLogin();
-            MainPage.setEmail(data[Object.keys(data)[i]].email);
-            MainPage.setPassword(data[Object.keys(data)[i]].password);
-            MainPage.clickSubmitLogin();
-            i++;
-            //WomenPage.checkIfWomenCategoryisOpen();      
+            LoginPage.setEmail(data[user].email);
+            LoginPage.setPassword(data[user].password);
+            LoginPage.clickSubmitLogin();
+            LoggedPage.checkCorrectLogin(data[user].nickname)
+            LoggedPage.clickSingOut();
+            cy.wait(7000);
+          })
+          
+            
+          
+              
+               
+                        
+              
+            
+            
+            
+                 
         
            })
-    })
+    
 
   
   })

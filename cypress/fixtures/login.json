@@ -1,11 +1,13 @@
 {
     "user1" :{
     "email": "adamk2000@interia.eu",
-    "password" : "password"
+    "password" : "password",
+    "nickname" : "Adam Kowalewski"
     },
 
     "user2" :{
     "email": "a@interia.eu",
-    "password" : "password"
+    "password" : "password",
+    "nickname" : "Adam Kowalewski"
     } 
 }

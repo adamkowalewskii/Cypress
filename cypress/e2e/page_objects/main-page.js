@@ -1,5 +1,6 @@
 export class MainPage {
 
+    
 
     static openAutomationPracticePage(){
 
@@ -26,24 +27,11 @@ export class MainPage {
     static clickLogin(){
         cy.get(".login").contains("Sign in").click();
     }
-
-    static setEmail(email){
-        cy.get("#email").type(email, { force: true });
+    
+    static clickAddCard(product){
         
-    }
-
-    static setPassword(password){
-        cy.get("#passwd").type(password, { force: true });
-        
-    }
-
-    static clickSubmitLogin(){
-        cy.get("#SubmitLogin").contains("Sign in").click();
-    }
-
-    static clickAddCard(){
-        
-        cy.get(".ajax_add_to_cart_button").contains("Add to cart").click();
+        cy.get(product).click();
+        cy.wait(10000);
 
     }
 
@@ -53,6 +41,5 @@ export class MainPage {
         }
         cy.get(".exclusive-medium").contains("Continue shopping").click();
     }
-
 
 }
